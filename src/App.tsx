@@ -1,16 +1,27 @@
-// Nota: O BrowserRouter está definido no main.tsx, então você pode usar Routes e Route diretamente aqui
-import { ComponentExample } from "@/components/component-example";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Routes, Route } from 'react-router-dom'
+import { Toaster } from '@/components/ui/sonner'
+import Dashboard from './pages/Dashboard'
+import Trading from './pages/Trading'
+import Portfolio from './pages/Portfolio'
+import History from './pages/History'
+import Settings from './pages/Settings'
+import Layout from './components/Layout'
 
-export function App() {
+function App() {
   return (
-    <div className="relative min-h-screen">
-      <div className="absolute top-4 right-4 z-50">
-        <ThemeToggle />
-      </div>
-      <ComponentExample />
-    </div>
-  );
+    <>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/trading" element={<Trading />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </Layout>
+      <Toaster />
+    </>
+  )
 }
 
-export default App;
+export default App
