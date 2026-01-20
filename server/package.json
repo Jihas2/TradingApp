@@ -1,0 +1,19 @@
+{
+  "name": "chatbot-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend para chatbot com múltiplos provedores de IA",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "openai": "^4.77.3",
+    "google-generative-ai": "^0.21.0",
+    "anthropic": "^0.37.2"
+  }
+}

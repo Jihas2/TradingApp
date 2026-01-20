@@ -1,0 +1,18 @@
+# Environment variables
+.env
+.env.local
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+bun.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
